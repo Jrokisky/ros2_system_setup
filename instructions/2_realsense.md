@@ -15,7 +15,7 @@
 2. Building CMake
     * We may need to build CMake as the librealsense library notes:
 
-    > Cmake Note: certain librealsense CMAKE flags (e.g. CUDA) require version 3.8+ which is currently not made available via apt manager for Ubuntu LTS.
+        > Cmake Note: certain librealsense CMAKE flags (e.g. CUDA) require version 3.8+ which is currently not made available via apt manager for Ubuntu LTS.
 
     * To check your CMake version: `cmake --version`
     * If it is not 3.8, download the [CMake Source][3] and follow the installation instructions [here][4]
