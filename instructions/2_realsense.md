@@ -7,10 +7,10 @@
 
 ### Instructions
 1. Getting the docs
-  * Navigate to the Intel Realsense sdk [repo][1]
-  * Open: */docs*
-  * Open: *installation_jetson.md*
-  * Read the contents
+    * Navigate to the Intel Realsense sdk [repo][1]
+    * Open: */docs*
+    * Open: *installation_jetson.md*
+    * Read the contents
 
 2. Building CMake
   * We may need to build CMake as the librealsense library notes:
