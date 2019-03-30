@@ -15,7 +15,7 @@
 
 # First: Installing the SDK Manager
 * Create an NVIDIA Develepor account [here](https://developer.nvidia.com/)
-* We are going to be following the instructions [here](https://docs.nvidia.com/sdk-manager/download-run-sdkm/index.html). Any needed modifications or pain points will be outlined below. Please review them first.
+* We are going to be following the instructions [here](https://docs.nvidia.com/sdk-manager/download-run-sdkm/index.html).
 
 # Second: Using the SDK Manager to Install Jetpack
 * We are going to be following the instructions [here](https://docs.nvidia.com/sdk-manager/install-with-sdkm-jetson/index.html). Any needed modifications or pain points will be outlined below. Please review them first.
@@ -23,4 +23,9 @@
   * Shut down the SDK Manager
   * run `rm -rf ~/.nvsdkm`
   * try again
-* When it is time to flash the TX2, we are going to want to manually force recovery mode
+* I reccomend running the installation in 2 steps due to potential issues with installing all software on the host machine:
+  * First run: select "Host Machine" Hardware Configuration box and skip flashing the jetson. Then shutdown the sdk manager.
+  * Second run: unselect "Host Machine" Hardware Configuration box and now flash the jetson
+* When it is time to flash the TX2, we are going to want to manually force recovery mode by following the given instructions.
+
+## Verifying Installation
