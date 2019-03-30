@@ -24,11 +24,11 @@
   * run `rm -rf ~/.nvsdkm`
   * try again
 * When it is time to flash the TX2, we are going to want to manually force recovery mode
-  * To place system in Force USB Recovery Mode
+  * To place system in Force USB Recovery Mode:
     1. Power down the device. If connected, remove the AC adapter from the device. The device must be powered OFF, and not in a suspend or sleep state.
     2. Connect the Micro-B plug on the USB cable to the Recovery (USB Micro-B) Port on the device and the other end to an available USB port on the host PC.
     3. Connect the power adapter to the device.
     4. With the system powered on:
-      a. Press and hold the RECOVERY FORCE buon.
-      b. While depressing the RECOVERY FORCE buon, press and release the RESET buon.
-      c. Wait 2 seconds and release the RECOVERY FORCE buon.
+      * Press and hold the RECOVERY FORCE buon.
+      * While depressing the RECOVERY FORCE buon, press and release the RESET buon.
+      * Wait 2 seconds and release the RECOVERY FORCE buon.
