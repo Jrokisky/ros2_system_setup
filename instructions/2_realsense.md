@@ -16,18 +16,22 @@
     * If it is not >= 3.8, download the [CMake Source][3] and follow the installation instructions [here][4]
 
 3. Building the library
-    * Modifications: in **Prepare Linux Backend and the Dev. Environment** 
+    * Modifications: **Prepare Linux Backend and the Dev. Environment** 
         1. Step 2a: we want to run `./scripts/install_glfw3.sh` instead of `sudo apt-get install libglfw3-dev`
         2. Step 2b: run `sudo apt-get install libgl1-mesa-dev libglu1-mesa-dev`
-        3. Step 4: as of March 23 2019, there's a [PR open][5] that updates the jetson installation script
-            * run: `cd scripts && wget https://raw.githubusercontent.com/IntelRealSense/librealsense/ce67126d1bf8903b0a537cccf366d607feef992d/scripts/patch-realsense-tx2.sh && cd ..`
-            * if the file above is not found, navigate to the open pr, and get the link for the *patch-realsense-tx2.sh* script
-            * run: `chmod +x scripts/patch-realsense-tx2.sh`
-            * change line 35 of *patch-realsense-tx2.sh* to `[ ! -d ${kernel_name} ] && git clone https://github.com/jetsonhacks/buildJetsonTX2Kernel.git && cd buildJetsonTX2Kernel && ./getKernelSourcesNoGUI.sh && cd .. && cp /usr/src/kernel/${kernel_name} ./${kernel_name}`
-            * run: `./scripts/patch-realsense-tx2.sh`
+        3. Step 4: we are going to skip this step and not patch the kernel.
+            * As noted in this [discussion][5] the patch is not required.
+            * As we are running on a non-supported kernel (4.9), the patching scripts will not work.
+            * If desired, you could build probably patch the 4.9 kernel on the TX2 by following what [JetsonHacks][6] does to get the d435i working on the Xavier.
+    * Modifications: **Building Librealsense2 SDK**
+        1. When running cmake, we want to run `cmake ../ -DBUILD_EXAMPLES=true -DFORCE_LIBUVC=true`
+            * You can read more about the build flags [here][7]
+            * We are using the `FORCE_LIBUVC` flag as we did not patch the kernel.
 
 [1]:https://github.com/IntelRealSense/librealsense
 [2]:https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md
 [3]:https://cmake.org/download/
 [4]:https://cmake.org/install/
-[5]:https://github.com/IntelRealSense/librealsense/pull/1438
+[5]:https://github.com/IntelRealSense/librealsense/issues/1039#issuecomment-359069915
+[6]:https://www.jetsonhacks.com/2019/01/21/intel-realsense-d435i-on-nvidia-jetson-agx-xavier/
+[7]:https://github.com/IntelRealSense/librealsense/wiki/Build-Configuration
