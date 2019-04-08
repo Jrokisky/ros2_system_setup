@@ -13,7 +13,10 @@
         > Cmake Note: certain librealsense CMAKE flags (e.g. CUDA) require version 3.8+ which is currently not made available via apt manager for Ubuntu LTS.
 
     * To check your CMake version: `cmake --version`
-    * If it is not >= 3.8, download the [CMake Source][3] and follow the installation instructions [here][4]
+    * If it is not >= 3.8, you will need to build it:
+      * download the [CMake Source][3] 
+      * follow the installation instructions [here][4]
+      * Run `./bootstrap -- -DCMAKE_USE_OPENSSL=ON` as ros2 requires [this][8]
 
 3. Building the library
     * Follow the [instructions][2], while making the modifications below.
@@ -36,3 +39,4 @@
 [5]:https://github.com/IntelRealSense/librealsense/issues/1039#issuecomment-359069915
 [6]:https://www.jetsonhacks.com/2019/01/21/intel-realsense-d435i-on-nvidia-jetson-agx-xavier/
 [7]:https://github.com/IntelRealSense/librealsense/wiki/Build-Configuration
+[8]:https://github.com/ros2/ros2/issues/470#issuecomment-371141641
