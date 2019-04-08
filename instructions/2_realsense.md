@@ -24,7 +24,7 @@
             * As we are running on a non-supported kernel (4.9), the patching scripts will not work.
             * If desired, you could build probably patch the 4.9 kernel on the TX2 by following what [JetsonHacks][6] does to get the d435i working on the Xavier.
     * Modifications: **Building Librealsense2 SDK**
-        1. When running cmake, we want to run `cmake ../ -DBUILD_EXAMPLES=true -DFORCE_LIBUVC=true`
+        1. When running cmake, we want to run `cmake ../ -DBUILD_EXAMPLES=true -DFORCE_LIBUVC=true -DBUILD_WITH_CUDA=true`
             * You can read more about the build flags [here][7]
             * We are using the `FORCE_LIBUVC` flag as we did not patch the kernel.
 
