@@ -16,6 +16,7 @@
     * If it is not >= 3.8, download the [CMake Source][3] and follow the installation instructions [here][4]
 
 3. Building the library
+    * Follow the [instructions][2], while making the modifications below.
     * Modifications: **Prepare Linux Backend and the Dev. Environment** 
         1. Step 2a: we want to run `./scripts/install_glfw3.sh` instead of `sudo apt-get install libglfw3-dev`
         2. Step 2b: run `sudo apt-get install libgl1-mesa-dev libglu1-mesa-dev`
