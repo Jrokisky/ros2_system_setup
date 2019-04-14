@@ -10,12 +10,10 @@
   1. Run the examples [here][3]
   
 #### Testing Remotely
-  1. 
-
-
-
+  1. Run the examples above, but run the listener on the remote machine
+    * You need to be on a network with udp multicast for this to work
 
 
 [1]:https://index.ros.org/doc/ros2/Installation/Linux-Development-Setup/
 [2]:https://github.com/ros2/ros2/issues/470#issuecomment-371141641
-[3]:https://index.ros.org/doc/ros2/Installation/Linux-Development-Setup/#id12
+[3]:https://index.ros.org/doc/ros2/Installation/Linux-Development-Setup/#try-some-examples
