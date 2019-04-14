@@ -16,7 +16,7 @@ The Intel Realsense SDK is a multi-platform library for working with various Int
 
       > Cmake Note: certain librealsense CMAKE flags (e.g. CUDA) require version 3.8+ which is currently not made available via apt manager for Ubuntu LTS.
 
-  * To check your CMake version: `cmake --version`
+* To check your CMake version: `cmake --version`
   * If it is not >= 3.8, you will need to build it:
     * download the [CMake Source][3] 
     * follow the installation instructions [here][4]
@@ -25,20 +25,20 @@ The Intel Realsense SDK is a multi-platform library for working with various Int
 ### Building the library
   * Follow the [instructions][2], while making the modifications below.
   * Modifications: **Prepare Linux Backend and the Dev. Environment** 
-      1. Step 4: we are going to skip this step and not patch the kernel.
-        * As noted in this [discussion][5] the patch is not required.
-        * As we are running on a non-supported kernel (4.9), the patching scripts will not work.
-        * If desired, you could build probably patch the 4.9 kernel on the TX2 by following what [JetsonHacks][6] does to get the d435i working on the Xavier.
+    * Step 4: we are going to skip this step and not patch the kernel.
+      * As noted in this [discussion][5] the patch is not required.
+      * As we are running on a non-supported kernel (4.9), the patching scripts will not work.
+      * If desired, you could build probably patch the 4.9 kernel on the TX2 by following what [JetsonHacks][6] does to get the d435i working on the Xavier.
   * Modifications: **Building Librealsense2 SDK**
-      1. When running cmake, we want to run `cmake ../ -DBUILD_EXAMPLES=true -DFORCE_LIBUVC=true -DBUILD_WITH_CUDA=true`
+      * When running cmake, we want to run `cmake ../ -DBUILD_EXAMPLES=true -DFORCE_LIBUVC=true -DBUILD_WITH_CUDA=true`
         * You can read more about the build flags [here][7]
         * We are using the `FORCE_LIBUVC` flag as we did not patch the kernel.
 
 ### Testing Installation
-  1. Now that the software is built and installed, we can run the realsense-viewer
+  * Now that the software is built and installed, we can run the realsense-viewer
     * Run `realsense-viewer`
     * When the application is launched, changed the *Stereo Module* settings to:
-       * Resolution: 640 x 480
+      * Resolution: 640 x 480
       * FPS: 6
     * Turn on the Stereo Module
 
