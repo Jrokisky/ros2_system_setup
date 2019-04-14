@@ -21,9 +21,7 @@
 3. Building the library
     * Follow the [instructions][2], while making the modifications below.
     * Modifications: **Prepare Linux Backend and the Dev. Environment** 
-        1. Step 2a: we want to run `./scripts/install_glfw3.sh` instead of `sudo apt-get install libglfw3-dev`
-        2. Step 2b: run `sudo apt-get install libgl1-mesa-dev libglu1-mesa-dev`
-        3. Step 4: we are going to skip this step and not patch the kernel.
+        1. Step 4: we are going to skip this step and not patch the kernel.
             * As noted in this [discussion][5] the patch is not required.
             * As we are running on a non-supported kernel (4.9), the patching scripts will not work.
             * If desired, you could build probably patch the 4.9 kernel on the TX2 by following what [JetsonHacks][6] does to get the d435i working on the Xavier.
