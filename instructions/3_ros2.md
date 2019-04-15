@@ -5,6 +5,7 @@ We will be building ROS2 from source using the ROS2 installation on Linux instru
 
 ## Instructions
   * Follow the instructions for Ubuntu 18.04 [here][1]
+  * We will be skipping the **Install more DDS Implementations** section
   * If you run into the error: `Protocol "https" not supported or disabled in libcurl`, it may been an issue with CMake not using OpenSSL as seen [here][2].
 
 ## Testing
