@@ -1,18 +1,37 @@
-## Setting up the Realsense Ros2 Node
+# Setting up the Realsense Ros2 Node
 
-### Instructions
-1. Create a Ros2 workspace
-    * run: `mkdir ~/ros2_realsense_node`
-    * run: `cd ~/ros2_realsense_node && mkdir src`
-    * run: `cd src`
-2. Clone the cv_bridge node [repository][2] into the `src` directory
+## Instructions
+
+### Create a Ros2 workspace
+  * run: `mkdir -p ~/ros2_realsense_node/src`
+  * run: `cd ~/ros2_realsense_node/src`
+  
+### Installing Dependencies
+  * Clone the cv_bridge node [repository][2] into the `src` directory
     * Follow the [install instructions][3], but skip the *install dependencies* section and the *tests* section
-3. 
-2. Clone the intel ros2 realsense node [repository][1] into the `src` directory
+  * Clone the image_transport node [repository][4] into the `src` directory
+  
+### Installing Realsense Ros2 Node
+  * Clone the intel ros2 realsense node [repository][1] into the `src` directory
+  * We will not be using the installation instructions provided in the readme, instead build as follows:
+    1. run: `. ~/ros2_ws/insall/setup.bash` to source ROS2 (if you installed ROS2 in a different workspace than `ros_ws`, use the source script from there)
+    2. run: `colcon build --symlink-install` to build the node & its dependencies
+    3. run: `cd .. & wget https://raw.githubusercontent.com/Jrokisky/ros2_system_setup/master/settings.yaml` to get the node settings file
 
-
-
+### Testing the Realsense Ros2 Node
+  * run: `. ~/ros2_realsense/install/local_setup.bash` to source our node
+  * run: `sudo jetson_clocks` to increase performance on the Jetson
+  * run: `cd ~/ros2_realsense`
+  * run: `ros2 run realsense_ros2_camera realsense_ros2_camera __params:=settings.yaml` to start the node
+  * Open another terminal and run: `. ~/ros2_ws/insall/setup.bash` followed by `rviz2` to launch a visualization tool
+    * If you run into any errors while launching, try to relaunch.
+    * When Rviz opens select: `Add` > `By Topic` > `/camera/depth/image_rect_raw/Image` > `OK`
+    * You should now see the greyscale depth image. If it freezes, remove the topic, and re-add it
+  * On the remote machine:
+    * run: `. ~/ros2_ws/install/local_setup.bash`
+    * run: `rivz2` and follow the steps above to add the depth topic visualizer
 
 [1]:https://github.com/intel/ros2_intel_realsense.git
 [2]:https://github.com/ros-perception/vision_opencv
-[3]: https://github.com/ros-perception/vision_opencv/tree/ros2/cv_bridge
+[3]:https://github.com/ros-perception/vision_opencv/tree/ros2/cv_bridge
+[4]:https://github.com/ros-perception/image_common/tree/ros2
