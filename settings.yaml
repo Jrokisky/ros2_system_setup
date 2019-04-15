@@ -1,0 +1,9 @@
+RealSenseCameraNode:
+        ros__parameters:
+                enable_pointcloud: false
+                enable_aligned_pointcloud: false
+                enable_aligned_depth: false
+                depth_fps: 6
+                enable_infra1: false
+                enable_infra2: false
+                enable_color: false
