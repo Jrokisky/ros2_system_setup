@@ -1,17 +1,20 @@
-## Setting up ROS2
+# Setting up ROS2
 
-### Instructions
-* Follow the instructions for Ubuntu 18.04 [here][1]
-* If you run into the error: `Protocol "https" not supported or disabled in libcurl`, it may been an issue with CMake not using OpenSSL as seen [here][2].
+## Background Information
+We will be building ROS2 from source using the ROS2 installation on Linux instructions.
 
-### Testing
+## Instructions
+  * Follow the instructions for Ubuntu 18.04 [here][1]
+  * If you run into the error: `Protocol "https" not supported or disabled in libcurl`, it may been an issue with CMake not using OpenSSL as seen [here][2].
 
-#### Testing Locally
-  1. Run the examples [here][3]
+## Testing
+
+### Testing Locally
+  * Run the examples [here][3]
   
-#### Testing Remotely
-  1. Run the examples above, but run the listener on the remote machine
-      * You need to be on a network with udp multicast for this to work
+### Testing Remotely
+  * Run the examples above, but run the listener on the remote machine
+    * You need to be on a network with udp multicast for this to work
 
 
 [1]:https://index.ros.org/doc/ros2/Installation/Linux-Development-Setup/
