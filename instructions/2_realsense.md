@@ -5,12 +5,6 @@ The Intel Realsense SDK is a multi-platform library for working with various Int
 
 ## Instructions
 
-### Getting the Installation docs
-  * Navigate to the Intel Realsense sdk [repo][1]
-  * Open: */docs*
-  * Notice that there is a Jetson specific installation: *installation_jetson.md*. As of March 23 2019, we do not want to follow the instructions here, as they are out of date.
-  * Instead, we are going to follow the general ubuntu build [instructions][2] (with some modifications)
-
 ### Building CMake
   * We may need to build CMake as the librealsense library notes:
 
@@ -21,6 +15,12 @@ The Intel Realsense SDK is a multi-platform library for working with various Int
     * download the [CMake Source][3] 
     * follow the installation instructions [here][4]
     * Run `./bootstrap -- -DCMAKE_USE_OPENSSL=ON` as ros2 requires [this][8]
+
+### Getting the Installation docs
+  * Navigate to the Intel Realsense sdk [repo][1]
+  * Open: */docs*
+  * Notice that there is a Jetson specific installation: *installation_jetson.md*. As of March 23 2019, we do not want to follow the instructions here, as they are out of date.
+  * Instead, we are going to follow the general ubuntu build [instructions][2] (with some modifications)
 
 ### Building the library
   * Follow the [instructions][2], while making the modifications below.
