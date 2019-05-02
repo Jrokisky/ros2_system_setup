@@ -20,12 +20,12 @@
     1. run: `source ~/ros2_ws/install/setup.bash` to source ROS2 (if you installed ROS2 in a different workspace than `ros_ws`, use the source script from there)
     2. run: `cd ~/ros2_realsense_node` 
     3. run: `colcon build --symlink-install` to build the node & its dependencies
-    4. run: `cd .. & wget https://raw.githubusercontent.com/Jrokisky/ros2_system_setup/master/settings.yaml` to get the node settings file
+    4. run: `wget https://raw.githubusercontent.com/Jrokisky/ros2_system_setup/master/settings.yaml` to get the node settings file
 
 ### Testing the Realsense Ros2 Node
   * run: `. ~/ros2_realsense/install/local_setup.bash` to source our node
   * run: `sudo jetson_clocks` to increase performance on the Jetson
-  * run: `cd ~/ros2_realsense`
+  * run: `cd ~/ros2_realsense_node`
   * run: `ros2 run realsense_ros2_camera realsense_ros2_camera __params:=settings.yaml` to start the node
   * Open another terminal and run: `. ~/ros2_ws/insall/setup.bash` followed by `rviz2` to launch a visualization tool
     * If you run into any errors while launching, try to relaunch.
