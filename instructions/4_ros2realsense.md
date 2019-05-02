@@ -15,7 +15,7 @@
 ### Installing Realsense Ros2 Node
   * Clone the intel ros2 realsense node [repository][1] into the `src` directory
   * We will not be using the installation instructions provided in the readme, instead build as follows:
-    1. run: `. ~/ros2_ws/insall/setup.bash` to source ROS2 (if you installed ROS2 in a different workspace than `ros_ws`, use the source script from there)
+    1. run: `source ~/ros2_ws/install/setup.bash` to source ROS2 (if you installed ROS2 in a different workspace than `ros_ws`, use the source script from there)
     2. run: `colcon build --symlink-install` to build the node & its dependencies
     3. run: `cd .. & wget https://raw.githubusercontent.com/Jrokisky/ros2_system_setup/master/settings.yaml` to get the node settings file
 
