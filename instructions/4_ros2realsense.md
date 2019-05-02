@@ -19,7 +19,7 @@
   * We will not be using the installation instructions provided in the readme, instead build as follows:
     1. run: `source ~/ros2_ws/install/setup.bash` to source ROS2 (if you installed ROS2 in a different workspace than `ros_ws`, use the source script from there)
     2. run: `cd ~/ros2_realsense_node` 
-    3. run: `colcon build --symlink-install` to build the node & its dependencies
+    3. run: `MAKE_FLAGS="-j4" colcon build --symlink-install` to build the node & its dependencies
     4. run: `wget https://raw.githubusercontent.com/Jrokisky/ros2_system_setup/master/settings.yaml` to get the node settings file
 
 ### Testing the Realsense Ros2 Node
