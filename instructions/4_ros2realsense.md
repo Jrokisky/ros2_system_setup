@@ -11,7 +11,7 @@
     * run: `cd vision_opencv`
     * run: `git checkout ros2`
   * Clone the image_transport node [repository][4] into the `src` directory
-    * run: `cd vision_opencv`
+    * run: `cd image_common`
     * run: `git checkout ros2`
   
 ### Installing Realsense Ros2 Node
