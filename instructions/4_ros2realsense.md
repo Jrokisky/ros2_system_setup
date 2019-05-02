@@ -23,7 +23,7 @@
     4. run: `wget https://raw.githubusercontent.com/Jrokisky/ros2_system_setup/master/settings.yaml` to get the node settings file
 
 ### Testing the Realsense Ros2 Node
-  * run: `. ~/ros2_realsense/install/local_setup.bash` to source our node
+  * run: `. ~/ros2_realsense_node/install/local_setup.bash` to source our node
   * run: `sudo jetson_clocks` to increase performance on the Jetson
   * run: `cd ~/ros2_realsense_node`
   * run: `ros2 run realsense_ros2_camera realsense_ros2_camera __params:=settings.yaml` to start the node
