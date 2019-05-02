@@ -24,10 +24,9 @@
 
 ### Testing the Realsense Ros2 Node
   * run: `source ~/ros2_realsense_node/install/local_setup.bash` to source our node
-  * run: `sudo jetson_clocks` to increase performance on the Jetson
   * run: `cd ~/ros2_realsense_node`
   * run: `ros2 run realsense_ros2_camera realsense_ros2_camera __params:=settings.yaml` to start the node
-  * Open another terminal and run: `source ~/ros2_ws/install/setup.bash` followed by `rviz2` to launch a visualization tool
+  * In the other terminal and run: `source ~/ros2_ws/install/setup.bash` followed by `rviz2` to launch a visualization tool
     * If you run into any errors while launching, try to relaunch.
     * When Rviz opens select: `Add` > `By Topic` > `/camera/depth/image_rect_raw/Image` > `OK`
     * You should now see the greyscale depth image. If it freezes, remove the topic, and re-add it
