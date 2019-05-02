@@ -7,7 +7,9 @@
   * run: `cd ~/ros2_realsense_node/src`
   
 ### Installing Dependencies
-  * Clone the cv_bridge node [repository][3] into the `src` directory
+  * Clone the cv_bridge node [repository][2] into the `src` directory
+    * run: `cd vision_opencv`
+    * run: `git checkout ros2`
   * Clone the image_transport node [repository][4] into the `src` directory
   
 ### Installing Realsense Ros2 Node
