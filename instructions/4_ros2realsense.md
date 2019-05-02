@@ -31,9 +31,6 @@
     * If you run into any errors while launching, try to relaunch.
     * When Rviz opens select: `Add` > `By Topic` > `/camera/depth/image_rect_raw/Image` > `OK`
     * You should now see the greyscale depth image. If it freezes, remove the topic, and re-add it
-  * On the remote machine:
-    * run: `source ~/ros2_ws/install/setup.bash`
-    * run: `rivz2` and follow the steps above to add the depth topic visualizer
 
 [1]:https://github.com/intel/ros2_intel_realsense.git
 [2]:https://github.com/ros-perception/vision_opencv
